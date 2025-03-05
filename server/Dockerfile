@@ -13,8 +13,8 @@ RUN npm install
 # Copy the backend application code
 COPY . .
 
-# Expose the backend application on a specific port
+# Expose the backend application on a specific port (assumed to be 3000 here)
 EXPOSE 3000
 
-# Start the backend application
+# Start the backend application (adjust depending on your start command)
 CMD ["npm", "start"]
