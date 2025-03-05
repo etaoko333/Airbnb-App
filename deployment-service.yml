@@ -14,11 +14,11 @@ spec:
     spec:
       containers:
       - name: frontend
-        image: ${FRONTEND_IMAGE}  # Using the image variable here
+        image: sholly333/airbnb-app-frontend:latest  # Replace with your image
         ports:
         - containerPort: 3000
       - name: backend
-        image: ${BACKEND_IMAGE}  # Using the image variable here
+        image: sholly333/airbnb-app-backend:latest  # Replace with your image
         ports:
         - containerPort: 3000
 ---
