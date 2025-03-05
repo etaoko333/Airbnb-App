@@ -24,7 +24,7 @@ spec:
         ports:
         - containerPort: 3000
         env:
-        - name: SALT_VALUE   # Add this section
+        - name: BCRYPT_SALT   # ✅ Corrected this line
           value: "$2b$10$HeeRPL7YACkhv4dpmck5AO"
 ---
 apiVersion: v1
