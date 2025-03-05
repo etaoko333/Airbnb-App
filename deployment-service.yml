@@ -15,10 +15,12 @@ spec:
       containers:
       - name: frontend
         image: sholly333/airbnb-app-frontend:latest  # Replace with your image
+        imagePullPolicy: IfNotPresent
         ports:
         - containerPort: 3000
       - name: backend
         image: sholly333/airbnb-app-backend:latest  # Replace with your image
+        imagePullPolicy: IfNotPresent
         ports:
         - containerPort: 3000
 ---
