@@ -1,4 +1,4 @@
-# Build stage using Node.js
+# Multi-stage build for Create React App frontend
 FROM node:18.13.0-slim AS builder
 
 # Set working directory
@@ -19,7 +19,7 @@ RUN npm run build
 # Production stage using Nginx
 FROM nginx:1.22-alpine AS production
 
-# Copy the built React app from the builder stage
+# Copy the built React application from the builder stage
 COPY --from=builder /app/build /usr/share/nginx/html
 
 # Copy the Nginx configuration file (adjust as needed)
