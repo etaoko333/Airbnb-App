@@ -26,6 +26,10 @@ spec:
         envFrom:
         - secretRef:
             name: airbnb-app-secrets  # Reference the secret
+        env:
+        - name: BCRYPT_SALT
+          value: "10"  # Set the salt factor here, or reference a secret if it's sensitive.
+
 ---
 apiVersion: v1
 kind: Service
