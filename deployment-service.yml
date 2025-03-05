@@ -24,8 +24,10 @@ spec:
         ports:
         - containerPort: 3000
         env:
-        - name: BCRYPT_SALT   # ✅ Corrected this line
+        - name: SALT_VALUE
           value: "$2b$10$HeeRPL7YACkhv4dpmck5AO"
+        - name: JWT_SECRET
+          value: "ce62a203ec7bc6acfcf254a26a35c6d0e98404b5bc34d749411990404d46c4cf714346f261acc97eab0525b26d81acdba91d943f3706e74d25ca067afabf24be"  # Use the generated secret here
 ---
 apiVersion: v1
 kind: Service
